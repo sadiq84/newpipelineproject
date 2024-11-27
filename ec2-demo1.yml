@@ -1,17 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: CloudFormation template for s3 bucket 
-    
+Description: Training- terraform CloudFormation
+
 Resources:
-  S3Bucket:
-    Type: AWS::S3::Bucket
-    Description: Creating Amazon S3 bucket from CloudFormation
-    Properties:
-      BucketName: my-s3-bucket-2pm-demo
-Outputs:
-  S3Bucket:
-    Description: Bucket Created using this template.
-    Value: !Ref S3Bucket
-    Resources:
   WebAppInstance:
     Type: AWS::EC2::Instance
     Properties:
@@ -35,3 +25,4 @@ Outputs:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
+
